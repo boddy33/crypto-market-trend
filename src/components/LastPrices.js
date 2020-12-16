@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 class LastPrices extends Component {
 
     render() {
-        let dateStr = ''
-        let date = new Date(this.props.last_update * 1000);
+        //let dateStr = ''
+        //let date = new Date(this.props.last_update * 1000);
         //dateStr = date.getHours() + ':' + ('0' + date.getMinutes()).substr(-2) + ':' + ('0' + date.getSeconds()).substr(-2);
         let eth_price = ''
         let btc_price = ''
