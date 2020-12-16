@@ -16,7 +16,7 @@ class App extends React.Component {
   }  
 
   componentDidMount(){
-    fetch('http://34.107.93.112/trend')
+    fetch('https://api.crypto-trend.live/trend')
     .then(response => response.json())
     .then(data => this.setState({trend: data}))
     .catch( err => console.error(err));
