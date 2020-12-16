@@ -32,7 +32,7 @@ class App extends React.Component {
                       xrp_price={this.state.trend.xrp_price} 
                       last_update={this.state.trend.update_timestamp}/>
         </Jumbotron>
-        <InfoPanel/>
+        <InfoPanel baskets={this.state.trend.baskets}/>
       </Container>
       ); 
   }  
