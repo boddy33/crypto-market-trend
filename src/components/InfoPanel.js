@@ -51,7 +51,7 @@ function getTextForTrend(code, timestamp) {
             text = '🚀 UPWARDS started on ';
             break;
         default:
-            text = '🔄 SIDEWAYS started on '
+            text = '🔀 SIDEWAYS started on '
     }
     let dateObj = new Date(timestamp * 1000)
     text += dateObj.toLocaleDateString()
