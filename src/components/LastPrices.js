@@ -9,18 +9,26 @@ class LastPrices extends Component {
         let eth_price = '...'
         let btc_price = '...'
         let xrp_price = '...'
-        if (this.props.eth_price) {
-            eth_price = this.props.eth_price.toLocaleString()
+        let ltc_price = '...'
+        let bch_price = '...'
+        if (this.props.prices) {
+            eth_price = this.props.prices.ETH.toLocaleString()
         }
-        if (this.props.btc_price) {
-            btc_price = this.props.btc_price.toLocaleString()
+        if (this.props.prices) {
+            btc_price = this.props.prices.BTC.toLocaleString()
         }
-        if (this.props.xrp_price) {
-            xrp_price = this.props.xrp_price.toLocaleString()
+        if (this.props.prices) {
+            xrp_price = this.props.prices.XRP.toLocaleString()
+        }
+        if (this.props.prices) {
+            ltc_price = this.props.prices.LTC.toLocaleString()
+        }
+        if (this.props.prices) {
+            bch_price = this.props.prices.BCH.toLocaleString()
         }
         return (
             <h5 className="text-center font-italic">
-                BTC: ${btc_price} | ETH: ${eth_price} | XRP: ${xrp_price}
+                BTC: ${btc_price} | ETH: ${eth_price} | XRP: ${xrp_price} | LTC: ${ltc_price} | BCH: $ {bch_price}
 {/*                 <br/>Updated: {dateStr} */}
             </h5>
         );
