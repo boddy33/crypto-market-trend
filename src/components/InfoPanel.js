@@ -56,6 +56,14 @@ function getTextForTrend(code, timestamp) {
     let dateObj = new Date(timestamp * 1000)
     text += dateObj.toLocaleDateString()
     text += ' at ' + dateObj.toLocaleTimeString()
+    let diffInSec = (Date.now() - dateObj) / 1000
+    let hs = Math.floor(diffInSec/60/60)
+    let min = Math.round(diffInSec/60 - hs*60)
+    if (min < 10) {
+        min = '0'+min
+    }
+    text += ` (+${hs}h. ${min}m.)`
+
     return text;
 }
 
